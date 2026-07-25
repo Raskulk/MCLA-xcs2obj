@@ -7,3 +7,5 @@ python xcs2obj.py -h (for help)
 
 Created with Claude AI
 
+Thanks to Foxxyyy for his Codex addon for working with MCLA files: https://github.com/Foxxyyy/CodeX.Games.MCLA
+
