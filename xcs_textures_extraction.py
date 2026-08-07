@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-extract_xcs_folder.py
+xcs_textures_extraction.py
 ======================
 Extracts textures from ALL .xcs files (Midnight Club: Los Angeles,
 City Sector, RSC5 / Xbox 360 format) in the specified folder and saves
@@ -14,10 +14,10 @@ If two different .xcs files produce a texture with the same final name ->
 the file is overwritten (the last one processed wins).
 
 Usage:
-    python3 extract_xcs_folder.py <xcs_folder> <Codex.Games.MCLA.strings.txt> <png_folder>
+    python3 xcs_textures_extraction.py <xcs_folder> <Codex.Games.MCLA.strings.txt> <png_folder>
 
 Example:
-    python3 extract_xcs_folder.py ./xcs_files ./Codex.Games.MCLA.strings.txt ./textures_png
+    python3 xcs_textures_extraction.py ./xcs_files ./Codex.Games.MCLA.strings.txt ./textures_png
 
 Dependencies: Pillow (pip install --break-system-packages pillow)
 """
@@ -323,7 +323,7 @@ def parse_xcs_textures(data: bytes):
 
 def main():
     if len(sys.argv) < 4:
-        print("Usage: python3 extract_xcs_folder.py <xcs_folder> <strings.txt> <png_folder>")
+        print("Usage: python3 xcs_textures_extraction.py <xcs_folder> <strings.txt> <png_folder>")
         sys.exit(1)
 
     in_dir, strings_path, out_dir = sys.argv[1], sys.argv[2], sys.argv[3]
